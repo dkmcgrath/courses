@@ -53,13 +53,13 @@ Plaso is a powerful, integrated tool and Python backend for doing timeline foren
 This will take a LONG LONG time. ​Even the image for this simple scenario contains hundreds of thousands of events.
 
 ```sh
-❯ log2timeline.py --vss_stores 3 tim2.dump tim2.dd
+❯ log2timeline.py --vss_stores 3 --volumes all --hashers all --parsers webhist,win7,win7_slow,win_gen --storage-file tim2.plaso tim2.dd
 ```
 
 We can use the dump file to build a human-readable csv format using psort.py. It's also possible to output in other formats, including SQL databases. ​This will take a LONG LONG time.
 
 ```sh
-❯ psort.py -z "CST6CDT" -w tim2.csv -o l2tcsv tim2.dump
+❯ psort.py -z "CST6CDT" -w tim2.csv -o l2tcsv tim2.plaso
 ```
 
 Suggestions to help make a smaller file: cat tim2.dd | grep .docx > new.txt

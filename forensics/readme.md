@@ -56,6 +56,7 @@ The grader for this class is Teo Coffman. His PDX username is `theodos`.
 * [Homework 2](hw2.md)
 * [Homework 3](hw3.md)
 * [Homework 4](hw4.md)
+* [Final Project](final_project_ctf.md)
 
 <!-- * [Homework 1](hw1.md)
 * [Homework 3](hw3.md)
