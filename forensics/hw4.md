@@ -50,7 +50,22 @@ Do the contents of this file look familiar? Using what you already know, you sho
 
 Plaso is a powerful, integrated tool and Python backend for doing timeline forensics that incorporates Sleuth Kit. Using this tool, we can integrate artifacts from the file system, registry, log files and much more into a comprehensive timeline. Running the program produces a binary .dump file, which is not human-readable. The default behavior is to use all the parsers available in plaso (e.g. file system events, registry changes, and event logs.)
 
-This will take a LONG LONG time. ​Even the image for this simple scenario contains hundreds of thousands of events.
+If you haven't been able to make plaso work, install it from source via
+
+```sh
+❯ sudo apt remove python3-plaso plaso
+❯ git clone https://github.com/log2timeline/plaso
+❯ cd plaso
+❯ sudo -H python3 -m pip install -r requirements.txt
+❯ sudo -H python3 setup.py build
+❯ sudo -H python3 setup.py install
+```
+
+There may be some complaints about not wanting to use pip because `externally-managed-environment`. This just means you have to either use a virtual environment or pass the `--break-system-packages` flag to the `pip` command. I prefer the latter, personally.
+
+Installing plaso takes a chunk of time.
+
+The below command will take a LONG LONG time. ​Even the image for this simple scenario contains hundreds of thousands of events.
 
 ```sh
 ❯ log2timeline.py --vss_stores 3 --volumes all --hashers all --parsers webhist,win7,win7_slow,win_gen --storage-file tim2.plaso tim2.dd
@@ -59,7 +74,7 @@ This will take a LONG LONG time. ​Even the image for this simple scenario cont
 We can use the dump file to build a human-readable csv format using psort.py. It's also possible to output in other formats, including SQL databases. ​This will take a LONG LONG time.
 
 ```sh
-❯ psort.py -z "CST6CDT" -w tim2.csv -o l2tcsv tim2.plaso
+❯ psort.py --output_time_zone "CST6CDT" -w tim2.csv -o dynamic tim2.plaso
 ```
 
 Suggestions to help make a smaller file: cat tim2.dd | grep .docx > new.txt
