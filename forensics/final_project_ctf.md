@@ -12,7 +12,7 @@
 
 ## Step 1
 
-* Obtain the files that you will need off the babbage server, located at @babbage.cs.pdx.edu:/disk/scratch/dmcgrath
+* Obtain the files that you will need off the babbage server, located at @babbage.cs.pdx.edu:/disk/scratch/ctf
 * The two files are extra_drive.zip and windows_11.zip
 * Unzip the files
 * Create the vm using the .vhdx image from the windows 11 folder
