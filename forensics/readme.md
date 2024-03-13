@@ -22,6 +22,7 @@
 
 ## Pages
 
+* [Mobile forensics](mobile.md) -- a brief introduction to mobile forensics
 * [tmux config](../.tmux.conf.md)
 * [Technical Writing](../technical_writing.md)
 * [VM Setup on Windows](../netsec/hyper-v.md)
