@@ -118,7 +118,7 @@ You can use any of the commonly available tools/scripting languages (e.g. grep, 
 
 ### Questions:
 
-* List the MAC addresses that belong to John’s devices.  Also find the manufacturer’s of the devices. There are online MAC address lookup tools you can use.
+* List the MAC addresses that belong to John’s devices.  Also find the manufacturers of the devices. There are online MAC address lookup tools you can use.
 * What is the MAC address for the missing Mac Book Pro (MBP) and Android Phone?
 * What are the IP addresses of John’s devices?
 * List the Access Points with which the MBP connected at different times.
