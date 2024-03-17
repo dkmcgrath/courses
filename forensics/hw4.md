@@ -120,7 +120,7 @@ You can use any of the commonly available tools/scripting languages (e.g. grep, 
 
 * List the MAC addresses that belong to John’s devices.  Also find the manufacturer’s of the devices. There are online MAC address lookup tools you can use.
 * What is the MAC address for the missing Mac Book Pro (MBP) and Android Phone?
-* What are the IP addressed of John’s devices?
+* What are the IP addresses of John’s devices?
 * List the Access Points with which the MBP connected at different times.
 * What is the MAC address of the iPhone?
 * What evidence shows that the user ‘jerk’ stole the MBP?
