@@ -12,7 +12,9 @@
 **TA**: Juliette Simonds
 
 * PDX username: jsimonds
-* Office hours:
+* Office hours (in-person only):
+  * Monday: 14:00 - 16:00 (Fishbowl)
+  * Tuesday: 14:00 - 16:00 (Fishbowl)
 
 ## Course Description
 
@@ -72,9 +74,9 @@ We will not be meeting the week of finals, and I will not be holding office hour
 
 ### Labs and notebook
 
-Lab assignments will be given each class covering the course material. You will perform each one, while maintaining a lab notebook in markdown that documents your progress via screenshots with your OdinID in them. The notebook should also include answers to any questions in the labs. Notebooks should be done in Markdown in their respective folders. Submission will be done via adding, committing and pushing the files to your private GitLab repository.
+Lab assignments will be given each class covering the course material. You will perform each one, while maintaining a lab notebook in markdown that documents your progress via screenshots with your OdinID in them. The notebook should also include answers to any questions in the labs. Notebooks should be done in Markdown in their respective folders. Submission will be done via adding, committing and pushing the files to your private [CECS GitLab](https://gitlab.cecs.pdx.edu) repository.
 
-Please add myself (dkmcgrath) and your TA (ceoh1) as collaborators to your private repo. You can do this by going to the settings page for your repo, clicking on the "Manage access" tab, and then clicking on the "Invite a collaborator" button. You will need to add both myself and your TA as collaborators.
+Please add myself (dmcgrath) and your TA (jsimonds) as collaborators to your private repo. You can do this by going to the settings page for your repo, clicking on the "Manage access" tab, and then clicking on the "Invite a collaborator" button. You will need to add both myself and your TA as collaborators.
 
 Always turn in what you have done on-time. Late work throughout the quarter may be compiled into a single submission that will be graded at the end of the last week of class in a file named notebooks/LateLabs.pdf. The notebook will be graded based upon the following rubric:
 
