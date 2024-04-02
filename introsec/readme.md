@@ -1,39 +1,18 @@
 # CS 491/591: Introduction to Security
 
-**Location**: EB 92 (TR 16:40-18:30)
+**Location**: FMA 204 (TR 12:00-13:50)
 
 **Instructor**: D. Kevin McGrath
 
 * PDX username: dmcgrath
-* Gitlab username: dkmcgrath
 * Office hours:
     * Location: FAB 120-15 and [Zoom](https://pdx.zoom.us/j/84716901228) (PW: PSUSecure)
     * Times:
-        * Monday: 13:30 - 15:30 (Zoom only)
-        * Tuesday: Code Party! 19:00 - 22:00 (FMH 204)
-        * Thursday: 14:15 - 16:00
-        * Friday 10:00 - 11:30 (Zoom only)
 
-**TA**: Cera Oh
+**TA**: Juliette Simonds
 
-* PDX username: ceoh
-* Gitlab username: ceoh1
+* PDX username: jsimonds
 * Office hours:
-    * Location: FAB Fishbowl and [Zoom](https://pdx.zoom.us/j/9244476182)
-    * Times:
-        * Wednesday: 13:30-15:30
-        * Friday: 14:00 - 16:00
-
-**Zulip Org**: [Zulip](https://introsec.zulip.cs.pdx.edu/)
-
-**Recorded Lectures**: These will be made available via [MediaSpace](https://media.pdx.edu/). Login required.
-
-[Slides from Sam Quinn](Research_Process.pdf)
-
-**Unofficial Slack Channel**:
-[#cs491\_591\_introsec](https://pdx-cs.slack.com/archives/C03CRD5G916). The professor is not involved in this channel.
-
-[FINAL EXAM](final.md) -- Due Friday of Finals Week!
 
 ## Course Description
 
@@ -70,7 +49,7 @@ This class provides an overview of computer security intended for a broad audien
 * [gdb tutorial](http://www.cs.cmu.edu/~gilpin/tutorial/)
 * [gef manual](https://hugsy.github.io/gef/)
 
-## Schedule
+## Schedule (SUBJECT TO CHANGE -- CHECK REGULARLY)
 
 | Week | Topic | Labs | Due on Monday |
 | ---- | ----- | ---- | ------------- |
