@@ -35,11 +35,11 @@ The grader for this class is Teo Coffman. His PDX username is `theodos`.
 ### Assignments
 
 * [Homework 1](hw1.md)
-* [Homework 2](hw2.md)
+<!-- * [Homework 2](hw2.md)
 * [Homework 3](hw3.md)
 * [Homework 4](hw4.md)
 * [Final Paper: CS496](final-496.md)
-* [Final Project: CS596](final.md) -- this can be done by 496 students in place of the paper.
+* [Final Project: CS596](final.md) -- this can be done by 496 students in place of the paper. -->
 
 ---
 ## To install Kali Linux through WSL:
