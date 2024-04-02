@@ -8,19 +8,12 @@
 * Office hours:
     * Location: FAB 120-15 and [Zoom](https://pdx.zoom.us/j/84716901228) (PW: PSUSecure)
     * Times:
-        * Monday: 10:00 - 11:30 (FAB 120-15 only)
-        * Tuesday: 11:00 - 12:00 (Zoom only)
-        * Tuesday: Code Party! 18:30 - 22:00 (FAB 86-01/88-03)
-        * Wednesday: 10:00 - 11:30 (FAB 120-15 only) -- except first and third Wednesdays of the month due to faculty meetings.
-        * Thursday: 09:30 - 11:30 (Zoom only)
+    * 
 
 **[Syllabus](syllabus.md)**
 
 **Recorded Lectures**: These will be made available via [MediaSpace](https://media.pdx.edu/channel/channelid/328503742). Login required.
 
-<!-- **Zulip Org**: [Zulip](https://netsec.zulip.cs.pdx.edu/) -->
-
----
 
 ## Homework
 
@@ -28,9 +21,8 @@ Each homework will build in some fashion on the previous homework. This may be c
 
 ### Submission
 
-All work will be submitted via MarkDown documents within an internal [gitlab](https://gitlab.cecs.pdx.edu) repo. You will be using this repo for the rest of the term. This repo exists on the CECS intranet. You will need to add myself and the TA to this repo as Developers. Grades and feedback will be done via a merge request from the TA.
+All work will be submitted via MarkDown documents within an internal [gitlab](https://gitlab.cecs.pdx.edu) repo. You will be using this repo for the rest of the term. This repo exists on the CECS intranet. You will need to add me to this repo as Developers. Grades and feedback will be done via a merge request from me.
 
-The grader for this class is Teo Coffman. His PDX username is `theodos`.
 
 ### Assignments
 
