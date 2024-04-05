@@ -119,7 +119,7 @@ deactivate
 #install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-bash <(curl https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh)
+curl -L https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh | bash
 
 if [ ! -d $HOME/clones/fastfetch ]; then
     git clone https://github.com/fastfetch-cli/fastfetch.git $HOME/clones/fastfetch
