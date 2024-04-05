@@ -55,7 +55,7 @@ This class provides an overview of computer security intended for a broad audien
 
 | Week | Topic | Labs | Due on Monday |
 | ---- | ----- | ---- | ------------- |
-| 1 | Introduction<br>Careers and Roles in Cybersecurity (CyberPDX)<br>Principles and Approaches<br>Access Control and Authorization<br>Linux Basics (files, commands)| [Labs&nbsp;#1]()| |
+| 1 | Introduction<br>Careers and Roles in Cybersecurity (CyberPDX)<br>Principles and Approaches<br>Access Control and Authorization<br>Linux Basics (files, commands)| [Labs&nbsp;#1](hw1.md)| |
 | 2 | Linux basics (command I/O, shell navigation, advanced files)<br>Basics (regex, file utilities, network commands, processes) | [Labs&nbsp;#2]()|Labs #1|
 | 3 | Linux Access Control (permissions, setuid, sudo)<br>Applied cryptography: Encoding, Hash functions, Message Authentication Codes<br>Applied Cryptography: Symmetric, Asymmetric (Public-Key) encryption | | |
 | 4 | Applied Cryptography: Digital signatures, Certificates, Key exchange protocols, Perfect Forward Secrecy, Future Secrecy, Signal protocol<br>Authentication: Password security, Multi-factor authentication | [Labs&nbsp;#3]()| Lab #2|

@@ -42,8 +42,6 @@ sudo apt -y install autojump\
     dos2unix\
     asciinema\
     python3-pyx\
-    rustc\
-    cargo\
     squashfs-tools\
     squashfs-tools-ng\
     zlib1g-dev\
@@ -118,6 +116,9 @@ fi
 #deactivate the virtual environment
 deactivate
 
+#install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 bash <(curl https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh)
 
 if [ ! -d $HOME/clones/fastfetch ]; then
@@ -175,6 +176,10 @@ if [ ! -d $HOME/clones/nerd-fonts ]; then
     cd $HOME
 fi
 
+if [ ! -d $HOME/clones/astral ]; then
+    git clone https://github.com/sffjunkie/astral.git $HOME/clones/astral
+fi
+
 ln -s $HOME/clones/diff-so-fancy/diff-so-fancy $HOME/bin/diff-so-fancy
 
 #fill in and uncomment the first two lines!
@@ -201,10 +206,7 @@ git config --global color.diff.whitespace "red reverse"
 # echo "Changing shell to zsh...will ask for password..."
 # chsh -s $(which zsh)
 
-#for all classes except 496:
-#wget -q -O setup.tar.bz2 http://web.cecs.pdx.edu/~dmcgrath/setup.tar.bz2
-#for cs496:
-wget -q -O setup.tar.bz2 http://web.cecs.pdx.edu/~dmcgrath/setup_496.tar.bz2
+wget -q -O setup.tar.bz2 http://web.cecs.pdx.edu/~dmcgrath/setup.tar.bz2
 #tar xavf setup.tar.bz2 -C ~/
 
 echo "Please open a new shell session, then uncompress the setup.tar.bz2 with 'tar xjvf ~/setup.tar.bz2 -C ~/' to complete setup."

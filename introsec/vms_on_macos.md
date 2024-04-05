@@ -64,7 +64,7 @@ OK, you have UTM installed, and you're ready to create your VM. How? Time for a 
 
       Click continue.
 
-   1. I would suggest you give your VM at least 4GB of memory, since it's going to be the primary external interface to your work environment for this class. As for the cores, leaving it at `default` is fine, unless you want to limit it to a specific number of cores (at least 2!). Click continue.
+   1. I would suggest you give your VM at least 2GB of memory, since it's going to be the primary external interface to your work environment for this class. As for the cores, leaving it at `default` is fine, unless you want to limit it to a specific number of cores (at least 2!). Click continue.
 
    1. For storage, 64GB should be plenty. We can resize later as needed. Click continue. It dynamically expands, so it won't take up 64GB on your hard drive initially.
 
