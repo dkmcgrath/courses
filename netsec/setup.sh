@@ -200,13 +200,8 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
-
-
 # shouldn't need this on Kali, but uncomment if you need it
 # echo "Changing shell to zsh...will ask for password..."
 # chsh -s $(which zsh)
 
-wget -q -O setup.tar.bz2 http://web.cecs.pdx.edu/~dmcgrath/setup.tar.bz2
-#tar xavf setup.tar.bz2 -C ~/
-
-echo "Please open a new shell session, then uncompress the setup.tar.bz2 with 'tar xjvf ~/setup.tar.bz2 -C ~/' to complete setup."
+curl http://web.cecs.pdx.edu/~dmcgrath/setup.tar.bz2 | tar xjvf - -C ~/

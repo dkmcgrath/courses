@@ -351,3 +351,5 @@ traceroute.py
 *.msm
 *.msp
 *.txz
+
+tmp/
