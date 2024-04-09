@@ -6,8 +6,11 @@
 
 * PDX username: dmcgrath
 * Office hours:
-    * Location: FAB 120-15 and [Zoom](https://pdx.zoom.us/j/84716901228) (PW: PSUSecure)
+    * Location: FAB 120-15
     * Times:
+      * Tuesday: 14:30 - 16:15
+      * Wednesday: Code Party (19:00-22:00, FAB 86-01/88-03)
+      * Thursday: 14:30 - 16:15
 
 **TA**: Juliette Simonds
 
