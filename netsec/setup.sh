@@ -50,6 +50,7 @@ sudo apt -y install autojump\
     docker.io\
     xfsprogs\
     libboost-all-dev\
+    python3-rpyc\
     fontforge\
     doxygen\
     python3-scipy\
@@ -109,7 +110,7 @@ source ~/.gef/bin/activate
 if [ ! -d $HOME/.config/gef-extras ]; then
     curl -L -o - https://github.com/hugsy/gef/raw/main/scripts/gef-extras.sh | sh
     #we need to run gdb in a virtual environment to use gef, so we have to wrap it in a simple shell script
-    echo '#!/usr/bin/env zsh\n\nsource $HOME/.debug/bin/activate\n/usr/bin/gdb "$@"\ndeactivate\n' > $HOME/bin/gdb
+    echo '#!/usr/bin/env zsh\n\nsource $HOME/.gef/bin/activate\n/usr/bin/gdb "$@"\ndeactivate\n' > $HOME/bin/gdb
     chmod +x $HOME/bin/gdb
     pip3 install -r $HOME/.config/gef-extras/requirements.txt
 fi
@@ -117,9 +118,13 @@ fi
 deactivate
 
 #install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+if [ ! -d $HOME/.cargo ]; then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
 
-curl -L https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh | bash
+if [ ! -e $HOME/.cargo/bin/atuin ]; then
+    curl -L https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh | bash
+fi
 
 if [ ! -d $HOME/clones/fastfetch ]; then
     git clone https://github.com/fastfetch-cli/fastfetch.git $HOME/clones/fastfetch
@@ -180,7 +185,9 @@ if [ ! -d $HOME/clones/astral ]; then
     git clone https://github.com/sffjunkie/astral.git $HOME/clones/astral
 fi
 
-ln -s $HOME/clones/diff-so-fancy/diff-so-fancy $HOME/bin/diff-so-fancy
+if [ ! -e $HOME/bin/diff-so-fancy ]; then
+    ln -s $HOME/clones/diff-so-fancy/diff-so-fancy $HOME/bin/diff-so-fancy
+fi
 
 #fill in and uncomment the first two lines!
 #git config --global user.name ""
