@@ -1,4 +1,3 @@
-```sh
 #!/usr/bin/env zsh
 
 echo "Updating software..."
@@ -43,8 +42,6 @@ sudo apt -y install autojump\
     dos2unix\
     asciinema\
     python3-pyx\
-    rustc\
-    cargo\
     squashfs-tools\
     squashfs-tools-ng\
     zlib1g-dev\
@@ -53,6 +50,7 @@ sudo apt -y install autojump\
     docker.io\
     xfsprogs\
     libboost-all-dev\
+    python3-rpyc\
     fontforge\
     doxygen\
     python3-scipy\
@@ -112,14 +110,21 @@ source ~/.gef/bin/activate
 if [ ! -d $HOME/.config/gef-extras ]; then
     curl -L -o - https://github.com/hugsy/gef/raw/main/scripts/gef-extras.sh | sh
     #we need to run gdb in a virtual environment to use gef, so we have to wrap it in a simple shell script
-    echo '#!/usr/bin/env zsh\n\nsource $HOME/.debug/bin/activate\n/usr/bin/gdb "$@"\ndeactivate\n' > $HOME/bin/gdb
+    echo '#!/usr/bin/env zsh\n\nsource $HOME/.gef/bin/activate\n/usr/bin/gdb "$@"\ndeactivate\n' > $HOME/bin/gdb
     chmod +x $HOME/bin/gdb
     pip3 install -r $HOME/.config/gef-extras/requirements.txt
 fi
 #deactivate the virtual environment
 deactivate
 
-bash <(curl https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh)
+#install rust
+if [ ! -d $HOME/.cargo ]; then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
+if [ ! -e $HOME/.cargo/bin/atuin ]; then
+    curl -L https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh | bash
+fi
 
 if [ ! -d $HOME/clones/fastfetch ]; then
     git clone https://github.com/fastfetch-cli/fastfetch.git $HOME/clones/fastfetch
@@ -176,7 +181,13 @@ if [ ! -d $HOME/clones/nerd-fonts ]; then
     cd $HOME
 fi
 
-ln -s $HOME/clones/diff-so-fancy/diff-so-fancy $HOME/bin/diff-so-fancy
+if [ ! -d $HOME/clones/astral ]; then
+    git clone https://github.com/sffjunkie/astral.git $HOME/clones/astral
+fi
+
+if [ ! -e $HOME/bin/diff-so-fancy ]; then
+    ln -s $HOME/clones/diff-so-fancy/diff-so-fancy $HOME/bin/diff-so-fancy
+fi
 
 #fill in and uncomment the first two lines!
 #git config --global user.name ""
@@ -196,17 +207,8 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
-
 # shouldn't need this on Kali, but uncomment if you need it
 # echo "Changing shell to zsh...will ask for password..."
 # chsh -s $(which zsh)
 
-#for all classes except 496:
-#wget -q -O setup.tar.bz2 http://web.cecs.pdx.edu/~dmcgrath/setup.tar.bz2
-#for cs496:
-wget -q -O setup.tar.bz2 http://web.cecs.pdx.edu/~dmcgrath/setup_496.tar.bz2
-#tar xavf setup.tar.bz2 -C ~/
-
-echo "Please open a new shell session, then uncompress the setup_496.tar.bz2 with 'tar xjvf ~/setup_496.tar.bz2 -C ~/' to complete setup."
-
-```
+curl http://web.cecs.pdx.edu/~dmcgrath/setup.tar.bz2 | tar xjvf - -C ~/
