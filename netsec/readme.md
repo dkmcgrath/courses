@@ -1,6 +1,6 @@
 # CS496/596: Network Security
 
-**Location**: FAB 10 (MW 14:00-15:50)
+**Location**: EB 103 (TR 16:40-18:30)
 
 **Instructor**: D. Kevin McGrath
 
@@ -8,12 +8,13 @@
 * Office hours:
     * Location: FAB 120-15 and [Zoom](https://pdx.zoom.us/j/84716901228) (PW: PSUSecure)
     * Times:
-    * 
+        * Tuesday: 14:30 - 16:15
+        * Wednesday: Code Party (19:00-22:00, FAB 86-01/88-03)
+        * Thursday: 14:30 - 16:15
 
 **[Syllabus](syllabus.md)**
 
 **Recorded Lectures**: These will be made available via [MediaSpace](https://media.pdx.edu/channel/channelid/328503742). Login required.
-
 
 ## Homework
 
