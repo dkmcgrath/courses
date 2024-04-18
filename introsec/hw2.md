@@ -70,11 +70,6 @@ This lab is all about Linux. We'll start with some basic tutorials on TryHackMe 
     1. Can you replace the `awk` pipeline component with a `cut`? What about the reverse?
     1. Take a look at a tool called `paste`. How might you use it to replace the use of `python` in this pipeline?
 
-1. Join the following room on TryHackMe:https://tryhackme.com/room/linuxfundamentalspart3 .
-
-   The room covers utilities for editing files and downloading content via the command line interface (`nano`, `wget`, `scp`). It also covers basic process commands (`ps`, `kill`), system management commands (`systemctl`), and timed commands (`cron`). Complete the exercise.
-
-   Take a screenshot showing completion of the room
 
 ## Submission
 
