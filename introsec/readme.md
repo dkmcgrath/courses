@@ -53,6 +53,9 @@ This class provides an overview of computer security intended for a broad audien
 * [_The Linux Development Platform_](https://archive.org/details/ost-computer-science-0130091154/mode/1up)
 * [gdb tutorial](http://www.cs.cmu.edu/~gilpin/tutorial/)
 * [gef manual](https://hugsy.github.io/gef/)
+* [Software setup](../software.md) -- tmux, ssh, git, etc.
+* [Technical Writing](../technical_writing.md) -- if unfamiliar with markdown or LaTeX, this page will help
+* [SSH tunneling tricks](../SSH_Tunnel_XRDP.md) -- SSH tunneling trick we will be using in various places through the term
 
 ## Schedule (SUBJECT TO CHANGE -- CHECK REGULARLY)
 
