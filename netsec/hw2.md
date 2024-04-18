@@ -7,7 +7,7 @@ Due Date: 2024-02-12 23:59:59
 
 ## Introduction
 
-`tcpdump`` is a packet capture utility that we will be using extensively throughout the rest of this course. Let's get some practice using it! You've done a couple of practice exercises, let's put them to use!
+`tcpdump` is a packet capture utility that we will be using extensively throughout the rest of this course. Let's get some practice using it! You've done a couple of practice exercises, let's put them to use!
 
 `tcpdump` (and `wireshark` and `tshark`) use BSD packet filter (BPF) style filters. Let's work a bit with them!
 

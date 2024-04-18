@@ -18,7 +18,7 @@ This lab is all about Linux. We'll start with some basic tutorials on TryHackMe 
 1. Join the following room on TryHackMe: [https://tryhackme.com/room/linuxfundamentalspart1](https://tryhackme.com/room/linuxfundamentalspart1) . The room covers basic Linux commands for navigating directories and files (`echo`, `whoami`, `cd`, `ls`, `cat`, `pwd`, `find`, `grep`, `wc`, as well as operators`&`, `&&`, `>`, and `>>`). Complete the exercise.
 
     Take a screenshot showing completion of the room
-1. Join the following room on TryHackMe: [https://tryhackme.com/room/linuxfundamentalspart2](https://tryhackme.com/room/linuxfundamentalspart2) . The room covers additional file system commands (`cp`, `mv`, `rm`, `file`, `touch`) as well as commands to examine file permissions and system log data (`/var/log`). Complete the exercise.
+1. Join the following room on TryHackMe: [https://tryhackme.com/r/room/linuxmodules](https://tryhackme.com/r/room/linuxmodules). This covers lots of useful linux commands! Complete the exercise.
 
     Take a screenshot showing completion of the room.
 1. `grep` is a tool which allows for regular expression matching of contents of a line or file. It is commonly known as a filter -- it removes unwanted cruft and only allows the display or further processing of data that matches (or doesn't match, in the case of an inverted search).
