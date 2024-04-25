@@ -258,7 +258,7 @@ Host *
     #set default username -- ***CHANGE THIS TO YOUR USERNAME***
     User your_user_name_here
     #This assumes you followed the instructions above
-    IdentityFile ~.ssh/id_ed25519
+    IdentityFile ~/.ssh/id_ed25519
     #keep connection alive every 30 seconds
     ServerAliveInterval 30
     #don't allow for more than 3 consecutive missed keepalives
