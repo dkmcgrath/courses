@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1465.65999942" height="671.9998320000001" font-family="Consolas, Menlo, 'Bitstream Vera Sans Mono', monospace, 'Powerline Symbols'" font-size="14px">
+  <style>
+    .br { font-weight: bold }
+    .fa { fill-opacity: 0.5 }
+    .it { font-style: italic }
+    .un { text-decoration: underline }
+  </style>
+
+  <rect width="100%" height="100%" style="fill: #121314" rx="4" ry="4"></rect>
+
+  <svg x="8.42333333" y="9.333331000000001" class="default-text-fill">
+    <g style="shape-rendering: optimizeSpeed">
+
+        <rect x="0.0" y="466.66655000000003" width="67.38666664" height="18.666662000000002" style="fill: #5F5F00"></rect><rect x="67.38666664" y="466.66655000000003" width="75.80999997" height="18.666662000000002" style="fill: #5F5F00"></rect><rect x="143.19666661" y="466.66655000000003" width="8.42333333" height="18.666662000000002" style="fill: #d3d7cf"></rect>
+
+        <rect x="0.0" y="615.999846" width="109.50333329" height="18.666662000000002" style="fill: #BCBCBC"></rect><rect x="109.50333329" y="615.999846" width="109.50333329" height="18.666662000000002" style="fill: #BCBCBC"></rect><rect x="219.00666658" y="615.999846" width="1229.80666618" height="18.666662000000002" style="fill: #BCBCBC"></rect>
+
+
+    </g>
+
+    <text style="fill: #cccccc">
+      <tspan y="0.0">
+        <tspan dy="1em" x="0.0" class="br it un">
+File Edit Options Buffers Tools Python Help
+        </tspan>
+      </tspan><tspan y="18.666662000000002">
+        <tspan dy="1em" x="0.0" style="fill: #34e2e2">
+from
+        </tspan><tspan x="42.11666665">
+scapy.
+        </tspan><tspan x="92.65666663" style="fill: #AFD7D7">
+all
+        </tspan><tspan x="126.34999995" style="fill: #34e2e2">
+import
+        </tspan><tspan x="185.31333326">
+* 
+        </tspan><tspan x="202.15999992000002" style="fill: #FF8700">
+#pull in all of scapy -- you could do it other ways, but this makes it isomorphic to using scapy command line
+        </tspan>
+      </tspan><tspan y="37.333324000000005">
+        <tspan dy="1em" x="0.0" style="fill: #34e2e2">
+import
+        </tspan><tspan x="58.96333331">
+socket
+        </tspan>
+      </tspan><tspan y="55.99998600000001">
+        <tspan dy="1em" x="0.0" style="fill: #34e2e2">
+import
+        </tspan><tspan x="58.96333331">
+sys
+        </tspan>
+      </tspan><tspan y="74.66664800000001">
+        <tspan dy="1em" x="0.0" style="fill: #34e2e2">
+import
+        </tspan><tspan x="58.96333331">
+time
+        </tspan>
+      </tspan><tspan y="111.99997200000001">
+        <tspan dy="1em" x="0.0" style="fill: #34e2e2">
+def
+        </tspan><tspan x="33.69333332" style="fill: #87D7FF">
+main
+        </tspan><tspan x="67.38666664">
+():
+        </tspan>
+      </tspan><tspan y="130.66663400000002">
+        <tspan dy="1em" x="33.69333332" style="fill: #34e2e2">
+if
+        </tspan><tspan x="58.96333331" style="fill: #AFD7D7">
+len
+        </tspan><tspan x="84.2333333">
+(sys.argv) &gt; 1: 
+        </tspan><tspan x="219.00666658" style="fill: #FF8700">
+#if we have a command line argument
+        </tspan>
+      </tspan><tspan y="149.33329600000002">
+        <tspan dy="1em" x="67.38666664" style="fill: #34e2e2">
+try
+        </tspan><tspan x="92.65666663">
+:
+        </tspan>
+      </tspan><tspan y="167.99995800000002">
+        <tspan dy="1em" x="101.07999996000001" style="fill: #FFD787">
+packets
+        </tspan><tspan x="168.4666666">
+= rdpcap(sys.argv[1])
+        </tspan>
+      </tspan><tspan y="186.66662000000002">
+        <tspan dy="1em" x="101.07999996000001" style="fill: #FF8700">
+#rdpcap is how we read a previously captured pcap file
+        </tspan>
+      </tspan><tspan y="205.33328200000003">
+        <tspan dy="1em" x="67.38666664" style="fill: #34e2e2">
+except
+        </tspan><tspan x="117.92666662">
+:
+        </tspan>
+      </tspan><tspan y="223.99994400000003">
+        <tspan dy="1em" x="101.07999996000001" style="fill: #34e2e2">
+print
+        </tspan><tspan x="143.19666661">
+(
+        </tspan><tspan x="151.61999994" style="fill: #FFAF87">
+&quot;File read failure: %s not found&quot;
+        </tspan><tspan x="438.01333316">
+% sys.argv[1])
+        </tspan>
+      </tspan><tspan y="242.66660600000003">
+        <tspan dy="1em" x="101.07999996000001">
+sys.
+        </tspan><tspan x="134.77333328" style="fill: #87FFD7">
+exit
+        </tspan><tspan x="168.4666666">
+(1)
+        </tspan>
+      </tspan><tspan y="261.33326800000003">
+        <tspan dy="1em" x="33.69333332" style="fill: #34e2e2">
+else
+        </tspan><tspan x="67.38666664">
+:
+        </tspan>
+      </tspan><tspan y="279.99993">
+        <tspan dy="1em" x="67.38666664" style="fill: #34e2e2">
+print
+        </tspan><tspan x="109.50333329">
+(
+        </tspan><tspan x="117.92666662" style="fill: #FFAF87">
+&quot;Need a pcap file to read!&quot;
+        </tspan><tspan x="345.35666653">
+)
+        </tspan>
+      </tspan><tspan y="298.66659200000004">
+        <tspan dy="1em" x="67.38666664">
+sys.
+        </tspan><tspan x="101.07999996000001" style="fill: #87FFD7">
+exit
+        </tspan><tspan x="134.77333328">
+(1)
+        </tspan>
+      </tspan><tspan y="335.99991600000004">
+        <tspan dy="1em" x="33.69333332" style="fill: #34e2e2">
+print
+        </tspan><tspan x="75.80999997">
+(packets) 
+        </tspan><tspan x="160.04333327" style="fill: #FF8700">
+#this gives us a nice summary of what we have in the pcap file
+        </tspan>
+      </tspan><tspan y="373.33324000000005">
+        <tspan dy="1em" x="33.69333332" style="fill: #34e2e2">
+for
+        </tspan><tspan x="67.38666664">
+packet 
+        </tspan><tspan x="126.34999995" style="fill: #34e2e2">
+in
+        </tspan><tspan x="151.61999994">
+packets[:100]: 
+        </tspan><tspan x="277.96999989" style="fill: #FF8700">
+#let&#39;s only look at the first 100
+        </tspan>
+      </tspan><tspan y="391.999902">
+        <tspan dy="1em" x="67.38666664" style="fill: #FF8700">
+#we can filter based on what scapy calls &quot;layers&quot;
+        </tspan>
+      </tspan><tspan y="410.66656400000005">
+        <tspan dy="1em" x="67.38666664" style="fill: #FF8700">
+#each layer is a portion of a packet
+        </tspan>
+      </tspan><tspan y="429.333226">
+        <tspan dy="1em" x="67.38666664" style="fill: #FF8700">
+#so a DNS packet would have an IP layer, a UDP layer, and a DNS layer
+        </tspan>
+      </tspan><tspan y="447.99988800000006">
+        <tspan dy="1em" x="67.38666664" style="fill: #FF8700">
+#ICMP would be IP, TCP, ICMP layers
+        </tspan>
+      </tspan><tspan y="466.66655000000003">
+        <tspan dy="1em" x="67.38666664" style="fill: #FF8700">
+#and beca
+        </tspan>
+      </tspan><tspan y="615.999846">
+        <tspan dy="1em" x="0.0" style="fill: #000000">
+-UUU:**--F1
+        </tspan><tspan x="109.50333329" class="br" style="fill: #555753">
+scapy_demo.py
+        </tspan><tspan x="244.27666657" style="fill: #000000">
+All (25,17)
+        </tspan><tspan x="370.62666652" style="fill: #000000">
+(Python ElDoc) Sat Feb
+        </tspan><tspan x="572.78666644" style="fill: #000000">
+1 9:18AM -----------------------------------------------------------------------------------------------
+        </tspan>
+      </tspan>
+    </text>
+  </svg>
+
+  <g transform="translate(-50 -50)">
+    <svg x="50%" y="50%" width="100" height="100">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 866.0254037844387 866.0254037844387" style="filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.4))">
+  <defs>
+    <mask id="small-triangle-mask">
+      <rect width="100%" height="100%" fill="white"></rect>
+      <polygon points="508.01270189221935 433.01270189221935, 208.0127018922194 259.8076211353316, 208.01270189221927 606.217782649107" fill="black">
+      </polygon>
+    </mask>
+  </defs>
+  <polygon points="808.0127018922194 433.01270189221935, 58.01270189221947 -1.1368683772161603e-13, 58.01270189221913 866.0254037844386" mask="url(#small-triangle-mask)" fill="white">
+  </polygon>
+  <polyline points="481.2177826491071 333.0127018922194, 134.80762113533166 533.0127018922194" stroke="white" stroke-width="90">
+  </polyline>
+</svg>
+    </svg>
+  </g>
+</svg>

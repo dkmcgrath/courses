@@ -60,16 +60,20 @@ $ kex --win -s
 ## Pages
 
 * [Software configuration](../software.md) -- not required, but possibly useful information on environment setup
-* [tmux config](../.tmux.conf.md) -- configuration file for tmux from the Software Configuration page
+* [`tmux` config](../.tmux.conf.md) -- configuration file for `tmux` from the Software Configuration page
 * [Powershell profile](../powershell_profile.md) -- powershell profile from the Software Configuration page
 * [Technical Writing](../technical_writing.md) -- if unfamiliar with markdown or LaTeX, this page will help
 * [VM Setup on Windows](hyper-v.md)
 * [VM Setup on macOS](vms_on_macos.md)
 * [Kali configuration](linux_setup.md)
+* [SSH setup](SSH_setup.md) -- setting up SSH keys for use with the VM
 * [SSH Tunnel for Windows RDP](../SSH_Tunnel_XRDP.md) -- SSH tunneling trick we will be using in various places through the term
 * [Introduction to Networking](../networking.md) -- a brief introduction to networking concepts
 * [Introduction to network reconnaissance](recon.md) -- a brief introduction to network reconnaissance and using nmap
 * [Cracking WiFi](crack_wifi.md) -- a brief introduction to cracking WiFi
+* [Capturing packets](../tcpdump.md) -- a brief introduction to capturing packets
+* [Using `wireshark`](../wireshark.md) -- a brief introduction to using `wireshark`
+* [Introduction to `scapy`](scapy.md) -- a brief introduction to `scapy`
 
 ## Useful links for learning
 
