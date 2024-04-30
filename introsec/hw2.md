@@ -13,7 +13,6 @@ This lab is all about Linux. We'll start with some basic tutorials on TryHackMe 
    * [_The Linux Command Line_](http://linuxcommand.org/tlcl.php) (Direct [PDF link](https://sourceforge.net/projects/linuxcommand/files/TLCL/19.01/TLCL-19.01.pdf/download))
    * [_Adventures with the Linux Command Line_](https://sourceforge.net/projects/linuxcommand/files/AWTLCL/21.10/AWTLCL-21.10.pdf/download)
    * [_The Linux Development Platform_](https://archive.org/details/ost-computer-science-0130091154/mode/1up)
-   * 
 
 1. Join the following room on TryHackMe: [https://tryhackme.com/room/linuxfundamentalspart1](https://tryhackme.com/room/linuxfundamentalspart1) . The room covers basic Linux commands for navigating directories and files (`echo`, `whoami`, `cd`, `ls`, `cat`, `pwd`, `find`, `grep`, `wc`, as well as operators`&`, `&&`, `>`, and `>>`). Complete the exercise.
 
