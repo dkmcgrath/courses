@@ -61,17 +61,17 @@ This class provides an overview of computer security intended for a broad audien
 
 | Week | Topic | Labs | Due on Monday |
 | ---- | ----- | ---- | ------------- |
-| 1 | Introduction<br>Careers and Roles in Cybersecurity (CyberPDX)<br>Principles and Approaches<br>Access Control and Authorization<br>Linux Basics (files, commands)| [Labs&nbsp;#1](hw1.md)| |
-| 2 | Linux basics (command I/O, shell navigation, advanced files)<br>Basics (regex, file utilities, network commands, processes) | |Labs #1|
-| 3 | Linux Access Control (permissions, setuid, sudo)<br>Applied cryptography: Encoding, Hash functions, Message Authentication Codes<br>Applied Cryptography: Symmetric, Asymmetric (Public-Key) encryption | [Labs&nbsp;#2](hw2.md)| |
-| 4 | Applied Cryptography: Digital signatures, Certificates, Key exchange protocols, Perfect Forward Secrecy, Future Secrecy, Signal protocol<br>Authentication: Password security, Multi-factor authentication | [Labs&nbsp;#3]()| |
-| 5 | Authentication: FIDO/Passkeys (Passwordless authentication), Zero-trust and continuous authentication<br>Social engineering (Spam, Phishing, Business Email Compromise, Scams, Fraud)<br>Network security: Data-link layer (802.11, WPA2)| [Labs&nbsp;#4]() | Labs #2 |
-| 6 | Network Security: Data-link layer (ARP), Network layer (IP, CIDR, Sniffing, Spoofing, Hijacking)<br>Network Security: Network layer (DDoS, IPSec/VPNs, firewalls and filtering, network segmentation, network intelligence, ICMP) | [Labs&nbsp;#5]() |  |
+| 1 | Introduction<br>Careers and Roles in Cybersecurity (CyberPDX)<br>Principles and Approaches<br>Access Control and Authorization<br>Linux Basics (files, commands)| [Lab&nbsp;#1](hw1.md)| |
+| 2 | Linux basics (command I/O, shell navigation, advanced files)<br>Basics (regex, file utilities, network commands, processes) | |Lab #1|
+| 3 | Linux Access Control (permissions, setuid, sudo)<br>Applied cryptography: Encoding, Hash functions, Message Authentication Codes<br>Applied Cryptography: Symmetric, Asymmetric (Public-Key) encryption | [Lab&nbsp;#2](hw2.md)| |
+| 4 | Applied Cryptography: Digital signatures, Certificates, Key exchange protocols, Perfect Forward Secrecy, Future Secrecy, Signal protocol<br>Authentication: Password security, Multi-factor authentication | | |
+| 5 | Authentication: FIDO/Passkeys (Passwordless authentication), Zero-trust and continuous authentication<br>Social engineering (Spam, Phishing, Business Email Compromise, Scams, Fraud)<br>Network security: Data-link layer (802.11, WPA2)| [Lab&nbsp;#3](hw3.md) | Lab 2 |
+| 6 | Network Security: Data-link layer (ARP), Network layer (IP, CIDR, Sniffing, Spoofing, Hijacking)<br>Network Security: Network layer (DDoS, IPSec/VPNs, firewalls and filtering, network segmentation, network intelligence, ICMP) |  |  |
 | 7 | Network Security: Transport layer (TCP, TLS, certificate authorities and transparency, certificate revocation), Application layer: DNS security (DNS, DNSSEC) <br> Network Security: Application layer - DNS security (DoH, DoT, Oblivious DNS), E-mail security (SMTP/IMAP/POP over TLS, DKIM, SPF, DMARC)<br>Host Security: Host attacks (Initial access, Privilege escalation)| | |
-| 8 | Host attacks (Internal recon, Lateral movement, Persistence, Impact)<br>Host defenses (IDS/IPS/EDR, signature detection, anomaly detection, blocklisting and allowlisting, Software signing, Virtualization and isolation techniques, File system backup and encryption)<br>Application security: DevSecOps| [Labs&nbsp;#6]()| Labs #5 |
-| 9 | Programming language and CPU security, Memory corruption, Return-oriented Programming, Canaries, ASLR, Control-Flow Integrity | [Labs&nbsp;#7]()| Labs #6 |
+| 8 | Host attacks (Internal recon, Lateral movement, Persistence, Impact)<br>Host defenses (IDS/IPS/EDR, signature detection, anomaly detection, blocklisting and allowlisting, Software signing, Virtualization and isolation techniques, File system backup and encryption)<br>Application security: DevSecOps| | |
+| 9 | Programming language and CPU security, Memory corruption, Return-oriented Programming, Canaries, ASLR, Control-Flow Integrity | | |
 | 10 | Supply-chain security <br> Privacy and anonymity security| | |
-| Finals week | | | Labs #7 |
+| Finals week | | | |
 | | | | |
 
 We will not be meeting the week of finals, and I will not be holding office hours. I will be available via email, but may not reply immediately, or even the same day.
