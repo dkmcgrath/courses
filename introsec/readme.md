@@ -6,6 +6,7 @@
 
 * PDX username: dmcgrath
 * Office hours:
+    * [Zoom link](https://pdx.zoom.us/j/84716901228)
     * Location: FAB 120-15
     * Times:
       * Tuesday: 14:30 - 16:15
