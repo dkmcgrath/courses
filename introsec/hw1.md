@@ -29,7 +29,7 @@ If you aren't familiar with how to use git, please see the [git page](../git.md)
 
     Visit your first TryHackMe room at [https://tryhackme.com/room/openvpn](https://tryhackme.com/room/openvpn) and complete it using the machine you intend to work from for the course.
 
-1. Join the following room on TryHackMe: [https://tryhackme.com/r/room/securityprinciples](https://tryhackme.com/r/room/securityprinciples). The room covers the fundamental security principles, terminology, access control models, and threat models. Complete the exercise.
+1. Join the following room on TryHackMe: [https://tryhackme.com/r/room/principlesofsecurity](https://tryhackme.com/r/room/principlesofsecurity). The room covers the fundamental security principles, terminology, access control models, and threat models. Complete the exercise.
 
     Take a screenshot showing completion of the room (e.g. all tasks and 100% completion) with your OdinID for your first lab notebook.
 
