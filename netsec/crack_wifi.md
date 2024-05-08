@@ -24,7 +24,7 @@ Looking at the above list, I hope you can figure out what mode we want to be in 
 
 There are multiple ways to put a card into monitor mode. This assumes, of course, the card is capable of monitor mode. While I'd like to say most modern cards are, it's simply not true. While often the hardware might support it, there are often driver issues that prevent it from working. This is especially true on Windows, where the drivers are often closed-source and not well supported.
 
-We will be using Alfa USB WiFi cards. While these come in many shapes and flavors, I'll save you the hassle of figuring out which to buy and just supply them pre-attached to the Pis we will be using. Best part? Kali Linux has the drivers built in, and they work out-of-the-box.
+We will be using Alfa USB WiFi cards. While these come in many shapes and flavors, I'll save you the hassle of figuring out which to buy and just supply them pre-attached to the workstations we will be using. Best part? Kali Linux has the drivers built in, and they work out-of-the-box.
 
 ## So how do we go into monitor mode?
 
@@ -42,7 +42,7 @@ Bus 004 Device 002: ID 0e8d:7612 MediaTek Inc. MT7612U 802.11a/b/g/n/ac Wireless
 Next, let's verify that the card supports monitor mode:
 
 ```sh
-❯ iw phy1 info | grep -i -A3 -B5 -m1 monitor
+❯ iw phy0 info | grep -i -A3 -B5 -m1 monitor
         Supported interface modes:
                  * IBSS
                  * managed
@@ -62,20 +62,19 @@ The simplest way:
 
 ```sh
 ❯ sudo airmon-ng check kill
-❯ sudo airmon-ng start wlan1
+❯ sudo airmon-ng start wlan0
 
 
 PHY     Interface       Driver          Chipset
 
-phy0    wlan0           brcmfmac        Broadcom 43455
-phy1    wlan1           mt76x2u         MediaTek Inc. MT7612U 802.11a/b/g/n/ac
-                (mac80211 monitor mode vif enabled for [phy1]wlan1 on [phy1]wlan1mon)
-                (mac80211 station mode vif disabled for [phy1]wlan1)
+phy0    wlan0           mt76x2u         MediaTek Inc. MT7612U 802.11a/b/g/n/ac
+                (mac80211 monitor mode vif enabled for [phy1]wlan0 on [phy0]wlan0mon)
+                (mac80211 station mode vif disabled for [phy1]wlan0)
 
 
 ```
 
-This will kill any potentially conflicting prorcesses, then put wlan1 into monitor mode. You can then use `iwconfig` to verify that it's in monitor mode.
+This will kill any potentially conflicting processes, then put wlan0 into monitor mode. You can then use `iwconfig` to verify that it's in monitor mode.
 
 ```sh
 ❯ iwconfig
@@ -83,25 +82,20 @@ lo        no wireless extensions.
 
 eth0      no wireless extensions.
 
-wlan0     IEEE 802.11  ESSID:off/any
-          Mode:Managed  Access Point: Not-Associated
-          Retry short limit:7   RTS thr:off   Fragment thr:off
-          Power Management:on
-
 docker0   no wireless extensions.
 
-wlan1mon  IEEE 802.11  Mode:Monitor  Frequency:2.457 GHz  Tx-Power=23 dBm
+wlan0mon  IEEE 802.11  Mode:Monitor  Frequency:2.457 GHz  Tx-Power=23 dBm
           Retry short limit:7   RTS thr:off   Fragment thr:off
           Power Management:on
 
 ```
 
-Notice that there is now no longer a `wlan1` interface, but a `wlan1mon` interface. This is the monitor mode interface.
+Notice that there is now no longer a `wlan0` interface, but a `wlan0mon` interface. This is the monitor mode interface.
 
-To do the same with `iwconfig`:
+To do the same with `iwconfig` (put `wlan0` into monitor mode):
 
 ```sh
-❯ sudo iwconfig wlan1 mode Monitor
+❯ sudo iwconfig wlan0 mode Monitor
 ```
 
 This has the disadvantage of not killing any conflicting processes, but it doesn't require additional software to be installed. That said, `airmon-ng` is a part of the `aircrack-ng` suite, and is generally installed by default on Kali Linux. So just use `airmon-ng`.
@@ -120,7 +114,7 @@ Before we move on, let's define some terms:
 
 ## Now what?
 
-There are several steps that need to be acocmplished to crack a WiFi password:
+There are several steps that need to be accomplished to crack a WiFi password:
 
 1. [x] Put the card into monitor mode and start monitoring for packets (should already be done)
 1. [ ] Determine the BSSID, ESSID, and channel of the network we want to crack.
@@ -134,12 +128,16 @@ We should already know the ESSID of the network (NetSec). We can find the BSSID 
 Launch `kismet`:
 
 ```sh
-❯ kismet
+❯ sudo kismet
 ```
 
-You will get some terminal output, and then a banner across your terminal that tells you to connect to `http://localhost:2501`. Since this is running remotely on the raspberry pi, you'll want to connect to `http://<pi's IP>:2501` from your laptop. You can find the IP of the pi with `ip a s` or `ifconfig`.
+You will get some terminal output, and then a banner across your terminal that tells you to connect to `http://localhost:2501`. Since this is running remotely on the workstation, you'll want to make use of an ssh tunnel to connect to the kismet site from your laptop. 
 
-Once you connect, you'll see a blank kismet interface. Click the pancake menu and select sources. You want to select `wlan1mon` as the source.
+```sh
+❯ ssh -NL 2501:localhost:2501 -l kali <hostname>.cs.pdx.edu -i <key file>
+```
+
+You can then connect to the specified website from your VM. Once you connect, you'll see a blank kismet interface. Click the pancake menu and select sources. You want to select `wlan0mon` as the source.
 
 ![kismet source](kismet.png)
 
@@ -149,13 +147,13 @@ Click on SSIDs, and you should see something like the following:
 
 ![kismet ssids](kismet_ssids.png)
 
-I have selected the Channels tab in the bottom window to see where networks are currently. You can see that the NetSec network is on channel 157, and the BSSID is `94:83:C4:24:E5:E6`. This is the information we need to proceed.
+I have selected the Channels tab in the bottom window to see where networks are currently. You can see that the NetSec network is on channel 157, and the BSSID is `94:83:C4:24:E5:E6`. This is the information we need to proceed. Your channel will likely be different. This is fine and expected.
 
 Click on the NetSec SSID, and you'll see more information. Click on "View Device Details" to get the second of the windows below.
 
 ![netsec](kismet_netsec.png)
 
-Now that you have that window open, select the "WiFi" tab. Scroll down to the bottom, and you should see **Associate Clients**. This is a list of all the devices currently connected to the network. You can see that there are two devices connected to the network. We will need to deauth one of them to capture the handshake.
+Now that you have that window open, select the "WiFi" tab. Scroll down to the bottom, and you should see **Associated Clients**. This is a list of all the devices currently connected to the network. You can see that there are two devices connected to the network. We will need to deauth one of them to capture the handshake.
 
 ![kismet_clients](kismet_clients.png)
 
@@ -163,39 +161,39 @@ Go ahead and shut down kismet. We don't need it running right now.
 
 ## Deauth and capture
 
-You will need two terminal windows for the next step.
+You will need two terminal windows for the next step. To do this with tmux, hit Control-t, then hit C. This will create a new window. Alternatively, you could split the pane in the first (and only) window with Control-t, then \ (for vertical) or - (for horizontal). This is the way I usually do it.
 
 Launch `airodump-ng`:
 
 ```sh
-❯ sudo airodump-ng --channel 157 --bssid 94:83:C4:24:E5:E6 --write netsec wlan1mon
+❯ sudo airodump-ng --channel 157 --bssid 94:83:C4:24:E5:E6 --write netsec wlan0mon
 ```
 
 In another terminal (I split horizontally in tmux), launch `aireplay-ng`:
 
 ```sh
-❯ sudo aireplay-ng --deauth 10 -a 94:83:C4:24:E5:E6 -c $target wlan1mon
+❯ sudo aireplay-ng --deauth 10 -a 94:83:C4:24:E5:E6 -c $target wlan0mon
 ```
 
 Where you set the `$target` to the MAC address of one of the devices connected to the network. You can see the MAC addresses in the "Station" column of the `airodump-ng` output.
 
 What you are doing is sending deauthentication packets to the target device. This will cause it to disconnect from the network. When it reconnects, it will send a handshake. This is what we want to capture.
 
-If we successfully capture the handshake, you will see a message in the `airodump-ng` window that says "WPA handshake: 94:83:C4:24:E5:E6". This is what we want to see.
+If we successfully capture the handshake, you will see a message in the `airodump-ng` window that says "WPA handshake: 94:83:C4:24:E5:E6". This is what we want to see. Your MAC address will likely be different, and should match the BSSID of the WAP you are attempting to access.
 
 ![airodump and aireplay](aircrack_step1.png)
 
-Once you have that, you can quit out of `airodump-ng` by hitting `Q` twice. You should see a file called `netsec-01.cap` in your directory. This is the file we will use to crack the password.
+Once you have that, you can quit out of `airodump-ng` by hitting `Q` twice. You should see a file called `netsec-01.cap` in your directory. This is the file we will use to crack the password. You may have more than just the `netsec-01.cap` file, with increasing numbers. This just means you've run the capture tool more often. 
 
 ## Cracking the password
 
-Now that we have the handshake, we can use `aircrack-ng` to crack the password. This is a dictionary attack, so you will need a wordlist. There are many available online. I suggest using `rockyou.txt` as it's a very large wordlist. You can snag a corrected copy via `scp` from `ada.cs.pdx.edu:/disk/scratch/dmcgrath/rockyou.txt`.
+Now that we have the handshake, we can use `aircrack-ng` to crack the password. This is a dictionary attack, so you will need a wordlist. There are many available online. I suggest using `rockyou.txt` as it's a very large wordlist. You can find it on kali located at `/usr/share/wordlists/rockyou.txt`. You may find it compressed, in which case go ahead and decompress it. Then use it!
 
 ```sh
 ❯ aircrack-ng --bssid 94:83:C4:24:E5:E6 -w rockyou.txt netsec-01.cap
 ```
 
-As a point of comparison, I ran the crack on both my laptop and a raspberry pi 5. The laptop took 1m 30s, and the pi took 19m 6s. Some of you are running on a pi 3, so I strongly encourage you to move the files to your VM and run the crack there. It will be much faster.
+As a point of comparison, I ran the crack on both my laptop and a raspberry pi 5. The laptop took 1m 30s, and the pi took 19m 6s. These workstations will likely be somewhere in the middle.
 
 ![aircrack comparison](aircrack_comparison.png)
 
