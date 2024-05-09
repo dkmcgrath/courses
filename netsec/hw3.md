@@ -1,48 +1,26 @@
-# Find the Firmware!
+# Hacking WiFi!
 
-Due Date: 2024-02-26 23:59:59
+Due Date: 2024-05-20 23:59:59
 
 * auto-gen TOC:
 {:toc}
 
 ## Introduction
 
-Often, it is possible to tap the communication between a device and its update servers. In this way, you can capture the transfer of the updated firmware. If you are lucky, it's a full firmware that is transmitted, the update is over an unencrypted channel, and it's transmitted as a single HTTP session. Unfortunately, the ideal case is fairly rare. Increasingly, updates are delivered over secured connections, it's often just a delta or patch that is transmitted, and it's even sometimes transmitted in small chunks over multiple sessions.
+So you've followed the instructions to break into WiFi networks. Now, what should we do with that?
 
 ## What you must do
 
-Using the tools you've learned in this module, dissect the provided packet capture and extract the firmware. You will find the packet capture at `ada.cs.pdx.edu:/disk/scratch/dmcgrath/firmware.pcap`. Simply `scp` it to your VM. It is important to note that HTTP often transmits binary data via BASE64 encoding!
+1. Using the `bettercap` tool, crack the NetSec WiFi network password. This is a WPA2 network, and is currently living in FAB 88-03. It is accessible for various points in the near vicinity of that room. You have already used the `aircrack` suite to do this, so you know the password. But let's pretend we don't.
+   1. Use `bettercap` to find the BSSID and connected clients of the NetSec network.
+   1. Use `bettercap` to perform a deauth attack on the network and capture the 4-way handshake.
+   1. Use the `hcx` toolsuite to convert the captured handshake to a format that `hashcat` can understand.
+   1. Crack the password using `hashcat`. You should use the `rockyou.txt` wordlist.
 
-Some useful information regarding the firmware you're after:
-
-```
-┌─(dmcgrath@kali:pts/3)─────────────────────────────────────────────────────────────────────────(~)─┐
-└─(14:43:%)── binwalk download.bin #what it should look like                          ──(Wed,Sep23)─┘
-
-DECIMAL       HEXADECIMAL     DESCRIPTION
---------------------------------------------------------------------------------
-48            0x30            Unix path: /dev/mtdblock/2
-96            0x60            LZMA compressed data, properties: 0x6D, dictionary size: 8388608 bytes, uncompressed size: 4438276 bytes
-302958        0x49F6E         MySQL MISAM index file Version 4
-1441888       0x160060        Squashfs filesystem, little endian, version 4.0, compression:xz, size: 2208988 bytes, 1159 inodes, blocksize: 262144 bytes, created: 2019-08-06 21:20:37
-
-┌─(dmcgrath@kali:pts/3)─────────────────────────────────────────────────────────────────────────(~)─┐
-└─(14:43:%)── md5sum download.bin                                                     ──(Wed,Sep23)─┘
-7aa6a7ebcbd98ce19539b668ff790655  download.bin
-┌─(dmcgrath@kali:pts/3)─────────────────────────────────────────────────────────────────────────(~)─┐
-└─(14:44:%)── sha512sum download.bin                                                  ──(Wed,Sep23)─┘
-2a7719719aa4f869586a7043f532e01ed4985e5c25b9a54979ac7d50c67820ec61c2805d6169b9c95a98104b8fb1d4f9ec698d23881360e99f5232a4f3cf12d4  download.bin
-┌─(dmcgrath@kali:pts/3)─────────────────────────────────────────────────────────────────────────(~)─┐
-└─(14:44:%)──                                                                         ──(Wed,Sep23)─┘
-```
-
-Once you have a firmware extracted that matches the above, use a tool called binwalk to extract the contents (this isn't a reverse engineering class, use the -M and -e options), then answer a few questions:
-
-1. What architecture is the firmware intended to run on?
-1. What OS is the firmware running?
-1. What users are present on the system?
-
-Write a document detailing how you extracted the firmware, how you investigated the firmware, and answers to the above questions. Please make sure to include any code you wrote or commands you executed.
+1. Once you have documented all of the above (commands, output, everything you would need to walk through it again) in your `hw3.md` file, connect your workstation to the wireless network. You should be able to do this with the password you just cracked. Take a screenshot showing the connection to the network. The easiest way is to the use the `nmtui` tool.
+1. Now that you have access to the network, use the `nmap` tool to scan the network. You should be able to find the IP address of the router and the IP addresses of the associated clients. Document this in your `hw3.md` file.
+1. For each associated client, use the `nmap` tool to scan the client. You should be able to find the open ports and services running on the client. Document this in your `hw3.md` file.
+1. There is an RTSP stream active on the network. Find it, access it, and take a screenshot of what it's looking at. What is it? What is its capacity? When was it manufactured? Document this in your `hw3.md` file.
 
 ## Submission
 

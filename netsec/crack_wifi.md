@@ -198,3 +198,5 @@ As a point of comparison, I ran the crack on both my laptop and a raspberry pi 5
 ![aircrack comparison](aircrack_comparison.png)
 
 As you can see, the pi is running at ~860 keys/second, while my laptop is running at ~10.5k keys/second. This is a significant difference. The pi 3 is even slower than the pi 5. The pi 3 is running at ~400 keys/second. I don't really want you to be running the crack for 20 minutes. It's not a good use of your time.
+
+For another datum, I ran the crack via hashcat. With the word in the rockyou.txt wordlist, it took 3 seconds on my Macbook. For passwords that aren't explicitly in the wordlist, but are variants thereof, hashcat is significantly faster than aircrack, primarily due to running on the GPU.
