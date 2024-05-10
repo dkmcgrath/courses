@@ -20,7 +20,7 @@ So you've followed the instructions to break into WiFi networks. Now, what shoul
 1. Once you have documented all of the above (commands, output, everything you would need to walk through it again) in your `hw3.md` file, connect your workstation to the wireless network. You should be able to do this with the password you just cracked. Take a screenshot showing the connection to the network. The easiest way is to the use the `nmtui` tool.
 1. Now that you have access to the network, use the `nmap` tool to scan the network. You should be able to find the IP address of the router and the IP addresses of the associated clients. Document this in your `hw3.md` file.
 1. For each associated client, use the `nmap` tool to scan the client. You should be able to find the open ports and services running on the client. Document this in your `hw3.md` file.
-1. There is an RTSP stream active on the network. Find it, access it, and take a screenshot of what it's looking at. What is it? What is its capacity? When was it manufactured? Document this in your `hw3.md` file.
+1. There is an RTSP stream active on the network. Find it, access it, and take a screenshot of what it's looking at. What is it (brand and model name)? What is its capacity? When was it manufactured? Document this in your `hw3.md` file.
 
 ## Submission
 
