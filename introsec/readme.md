@@ -57,6 +57,7 @@ This class provides an overview of computer security intended for a broad audien
 * [Software setup](../software.md) -- tmux, ssh, git, etc.
 * [Technical Writing](../technical_writing.md) -- if unfamiliar with markdown or LaTeX, this page will help
 * [SSH tunneling tricks](../SSH_Tunnel_XRDP.md) -- SSH tunneling trick we will be using in various places through the term
+* [Cracking Wifi](../netsec/crack_wifi.md) -- a brief introduction to cracking WiFi
 
 ## Schedule (SUBJECT TO CHANGE -- CHECK REGULARLY)
 
