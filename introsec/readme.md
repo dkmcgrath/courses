@@ -20,6 +20,10 @@
   * Monday: 14:00 - 16:00 (Fishbowl)
   * Tuesday: 14:00 - 16:00 (Fishbowl)
 
+## FINAL PROJECT:
+
+[Final Project](final.md) -- Please submit topics by Friday of Week 9.
+
 ## Course Description
 
 This class provides an overview of computer security intended for a broad audience. Topics covered include basic security principles, access control, cryptography, authentication, network security, host security, application security, and privacy and anonymity with a focus on how they are embodied in actual systems.
