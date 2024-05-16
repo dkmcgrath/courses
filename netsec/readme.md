@@ -30,10 +30,11 @@ All work will be submitted via MarkDown documents within an internal [gitlab](ht
 * [Homework 1](hw1.md)
 * [Homework 2](hw2.md)
 * [Homework 3](hw3.md)
-  
+* [Homework 4](hw4.md)
+
 <!-- * [Homework 2](hw2.md)
 * [Homework 3](hw3.md)
-* [Homework 4](hw4.md)
+
 * [Final Paper: CS496](final-496.md)
 * [Final Project: CS596](final.md) -- this can be done by 496 students in place of the paper. -->
 
@@ -79,8 +80,11 @@ $ kex --win -s
 
 ## Useful links for learning
 
-* [tmux cheatsheet](https://tmuxcheatsheet.com/)
-* [Linux Handbook on tmux](https://linuxhandbook.com/tmux/)
+* [The Art of Packet Crafting with Scapy](https://0xbharath.github.io/art-of-packet-crafting-with-scapy/index.html)
+* [`scapy` cheatsheet](ScapyCheatSheet_v0.2.pdf)
+* [`nmap` cheatsheet](https://www.stationx.net/nmap-cheat-sheet/)
+* [`tmux` cheatsheet](https://tmuxcheatsheet.com/)
+* [Linux Handbook on `tmux`](https://linuxhandbook.com/tmux/)
 * [Markdown](https://guides.github.com/features/mastering-markdown/)
 * [The C Book](https://publications.gbdirect.co.uk/c_book/)
 * [The GNU `make` manual](https://www.gnu.org/software/make/manual/make.pdf)
