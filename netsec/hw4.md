@@ -36,7 +36,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 └─(14:44:%)──                                                                         ──(Wed,Sep23)─┘
 ```
 
-Once you have a firmware extracted that matches the above, use a tool called binwalk to extract the contents (this isn't a reverse engineering class, use the -M and -e options), then answer a few questions:
+Once you have a firmware extracted that matches the above, use a tool called `binwalk` to extract the contents (this isn't a reverse engineering class, use the `-M` and `-e` options), then answer a few questions:
 
 1. What architecture is the firmware intended to run on?
 1. What OS is the firmware running?
@@ -46,4 +46,4 @@ Write a document detailing how you extracted the firmware, how you investigated 
 
 ## Submission
 
-Everything above should be documented in a markdown file in your repo called `hw3/hw3.md`. Commit and push this to your repo. Once you have done this, you can consider the assignment submitted.
+Everything above should be documented in a markdown file in your repo called `hw4/hw4.md`. Commit and push this to your repo. Once you have done this, you can consider the assignment submitted.
