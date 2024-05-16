@@ -1,6 +1,6 @@
 #Final Project CS596
 
-Due Date: 2024-03-22 23:59:59
+Due Date: Friday of Finals Week 23:59:59
 
 * auto-gen TOC:
 {:toc}

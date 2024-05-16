@@ -31,34 +31,8 @@ All work will be submitted via MarkDown documents within an internal [gitlab](ht
 * [Homework 2](hw2.md)
 * [Homework 3](hw3.md)
 * [Homework 4](hw4.md)
-
-<!-- * [Homework 2](hw2.md)
-* [Homework 3](hw3.md)
-
 * [Final Paper: CS496](final-496.md)
-* [Final Project: CS596](final.md) -- this can be done by 496 students in place of the paper. -->
-
----
-## To install Kali Linux through WSL:
-
-```
-wsl --install -d kali-linux
-```
-
-### A nice GUI
-Should you want a GUI for any reason, you can get a nice one with the following commands run from within the Kali session:
-
-```sh
-$ sudo apt install 
-$ sudo apt upgrade
-$ sudo apt install -y kali-win-kex
-```
-
-Then, to start the GUI, run (f8 will exit fullscreen mode):
-
-```sh
-$ kex --win -s
-```
+* [Final Project: CS596](final.md) -- this can be done by 496 students in place of the paper.
 
 ## Pages
 
