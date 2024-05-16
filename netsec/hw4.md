@@ -11,7 +11,7 @@ Often, it is possible to tap the communication between a device and its update s
 
 ## What you must do
 
-Using the tools you've learned in this module, dissect the provided packet capture and extract the firmware. You will find the packet capture at `ada.cs.pdx.edu:/disk/scratch/dmcgrath/firmware.pcap`. Simply `scp` it to your VM. It is important to note that HTTP often transmits binary data via BASE64 encoding!
+Using the tools you've learned in this module, dissect the provided packet capture and extract the firmware. You will find the packet capture at `ada.cs.pdx.edu:/disk/scratch/dmcgrath/firmware.pcap`. Simply `scp` it to your VM (you could also use the workstations we used to crack Wi-Fi, if you wish). It is important to note that HTTP often transmits binary data via BASE64 encoding!
 
 Some useful information regarding the firmware you're after:
 
