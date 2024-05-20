@@ -1,5 +1,5 @@
 
-# HW4: Fuzzing
+# HW5: Fuzzing
 
 Due Date: 2024-03-17 23:59:59
 
@@ -26,8 +26,6 @@ Steps to recreate:
 1. Follow the AFLnet instructions as normal -- don't use Docker!
 
 ### Original update
-
-This requires the use of an x86 machine. I don't have a lot of spare x86 machines lying around, but I do have some. Please reach out individually via email if you need access to an x86 machine to complete this assignment.
 
 If you are running into trouble getting this to run on your x86 machine, you can use this Dockerfile to build a working image:
 

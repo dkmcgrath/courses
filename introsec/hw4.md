@@ -27,7 +27,7 @@ This homework covers the general topic of network security. You will be looking 
 
     Take a screenshot showing completion of the room. This should be included in your `hw4.md` file.
 
-1. Join the following room on TryHackMe: [https://tryhackme.com/r/room/nmap01](hhttps://tryhackme.com/r/room/nmap01). This room covers the basics of `nmap`. Complete the exercise.
+1. Join the following room on TryHackMe: [https://tryhackme.com/r/room/nmap01](https://tryhackme.com/r/room/nmap01). This room covers the basics of `nmap`. Complete the exercise.
 
     Take a screenshot showing completion of the room. This should be included in your `hw4.md` file.
 
