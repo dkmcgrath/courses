@@ -52,6 +52,7 @@ All work will be submitted via MarkDown documents within an internal [gitlab](ht
 * [Using `wireshark`](../wireshark.md) -- a brief introduction to using `wireshark`
 * [Introduction to `scapy`](scapy.md) -- a brief introduction to `scapy`
 * [80 to 0 in Under 5 Seconds: Falsifying a Medical Patient’s Vitals](rwhat.md) -- an article detailing a real-world attack on a medical device, including how he reversed the protocol (RWHAT).
+* [Defensive measures](../firewalls.md) -- a brief introduction to firewalls and IPS/IDS
 
 ## Useful links for learning
 
