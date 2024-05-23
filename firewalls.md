@@ -163,36 +163,36 @@ Sometimes though, the built in rules just won't cut it. Maybe there's a new expl
 
 The above list is not exhaustive, and I want us to focus primarily on the final point. Lua gives us the ability to perform complex logic on our packet structure or the content of the packet. It allows for things like detecting a mismatch between reported and actual length (remember that, it'll be useful soon). The below verifies that reported length is the same as actual length.
 
-```lua=
-function init (args)
-    local needs = {}
-    needs["payload"] = tostring(true)
-    return needs
-end
-
-function string.tohex(str)
-    return (str:gsub('.', function (c)
-        return string.format('%02X ', string.byte(c))
-    end))  
-end
-
-function match(args)
-    local b = args['payload']
-    if b == nil then
-        print ("Payload buffer empty! Aborting...")
-        return 0
-    end
-    print (string.tohex(b))
-    -- DNS RFC specifies length is reported in the first two bytes.
-    dns_size_high_byte = b:byte(1)
-    dns_size_low_byte = b:byte(2)
-    dns_size = tonumber(dns_size_high_byte) * 256 + tonumber(dns_size_low_byte)
-    -- check to ensure reported lenghth is same as actual length.  Subtract 2 for length field
-    if dns_size ~= string.len(b)-2 then
-            return 1
-    end
-    return 0
-end
+```lua
+ 1 function init (args)
+ 2     local needs = {}
+ 3     needs["payload"] = tostring(true)
+ 4     return needs
+ 5 end
+ 6 
+ 7 function string.tohex(str)
+ 8     return (str:gsub('.', function (c)
+ 9         return string.format('%02X ', string.byte(c))
+10     end))  
+11 end
+12 
+13 function match(args)
+14     local b = args['payload']
+15     if b == nil then
+16         print ("Payload buffer empty! Aborting...")
+17         return 0
+18     end
+19     print (string.tohex(b))
+20     -- DNS RFC specifies length is reported in the first two bytes.
+21     dns_size_high_byte = b:byte(1)
+22     dns_size_low_byte = b:byte(2)
+23     dns_size = tonumber(dns_size_high_byte) * 256 + tonumber(dns_size_low_byte)
+24     -- check to ensure reported lenghth is same as actual length.  Subtract 2 for length field
+25     if dns_size ~= string.len(b)-2 then
+26             return 1
+27     end
+28     return 0
+29 end
 ```
 
 Lines 1-5 are required, while lines 7-11 are useful for debugging purposes. On a failed test, return 1 to trigger the rule. On a passing test, return 0 to skip this rule. Pay attention to lines 21-23 -- this is how you pull out bytes and combine into a 16-bit int.
