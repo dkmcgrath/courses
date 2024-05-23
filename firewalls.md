@@ -71,7 +71,7 @@ Either long or short options are allowed.
 Options:
     --ipv4	-4		Nothing (line is ignored by ip6tables-restore)
     --ipv6	-6		Error (line is ignored by iptables-restore)
-[!] --proto	-p proto	protocol: by number or name, eg. `tcp'
+[!] --proto	-p proto	protocol: by number or name, eg. 'tcp'
 [!] --source	-s address[/mask][...]
 				source specification
 [!] --destination -d address[/mask][...]
@@ -87,7 +87,7 @@ Options:
   --numeric	-n		numeric output of addresses and ports
 [!] --out-interface -o output name[+]
 				network interface name ([+] for wildcard)
-  --table	-t table	table to manipulate (default: `filter')
+  --table	-t table	table to manipulate (default: 'filter')
   --verbose	-v		verbose mode
   --wait	-w [seconds]	maximum wait to acquire xtables lock before give up
   --wait-interval -W [usecs]	wait time to try to acquire xtables lock
@@ -205,3 +205,14 @@ If this topic interests you, then you might find the following optional resource
 * [Lua reference manual](https://www.lua.org/manual/5.4/)
 * [Suricata home page](https://suricata-ids.org/)
 * [Snort home page](https://www.snort.org/)
+
+There exist some operating systems that are designed to be firewalls. These are often referred to as "firewall distros". Some (but certainly not all) of the more popular ones are:
+
+* [OPNSense](https://opnsense.org/)
+* [pfSense](https://www.pfsense.org/)
+* [OpenWRT](https://openwrt.org/)
+* [IPFire](https://www.ipfire.org/)
+* [Security Onion](https://securityonionsolutions.com/)
+* [Endian](https://www.endian.com/)
+
+The first two are BSD based, while the rest are Linux based. Their capabilities vary, but they all offer, at minimum, a firewall and intrusion detection/prevention system. They also often have VPN capabilities and a user-friendly web interface for configuration.
