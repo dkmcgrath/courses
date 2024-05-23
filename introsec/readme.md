@@ -63,6 +63,7 @@ This class provides an overview of computer security intended for a broad audien
 * [SSH tunneling tricks](../SSH_Tunnel_XRDP.md) -- SSH tunneling trick we will be using in various places through the term
 * [Cracking Wifi](../netsec/crack_wifi.md) -- a brief introduction to cracking WiFi
 * [Defensive measures](../firewalls.md) -- a brief introduction to firewalls and IPS/IDS
+* [TunnelVision exploit against VPNs](https://github.com/leviathansecurity/TunnelVision) -- an exploit a malicious network admin could use to render most VPNs useless.
 
 ## Schedule (SUBJECT TO CHANGE -- CHECK REGULARLY)
 
