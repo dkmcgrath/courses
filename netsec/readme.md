@@ -31,6 +31,7 @@ All work will be submitted via MarkDown documents within an internal [gitlab](ht
 * [Homework 2](hw2.md)
 * [Homework 3](hw3.md)
 * [Homework 4](hw4.md)
+* [Homework 5](hw5.md)
 * [Final Paper: CS496](final-496.md)
 * [Final Project: CS596](final.md) -- this can be done by 496 students in place of the paper.
 

@@ -10,9 +10,7 @@ Due Date: 2024-03-17 23:59:59
 
 This is adapted from the AFLnet tutorial. And by adapted, I mean I'm making use of their tutorial.
 
-## Update
-
-### Update to the update
+## Mac M1/2/3 users
 
 OK, so what do you do if you don't have access to an x86 machine? I'm assuming this is only relevant to the Apple M1/2/3 crowd, but I could be wrong. Turns out you can do this via Qemu emulation within UTM.
 
@@ -25,7 +23,7 @@ Steps to recreate:
 1. Boot the VM and install Ubuntu.
 1. Follow the AFLnet instructions as normal -- don't use Docker!
 
-### Original update
+## Using docker to simplify the process
 
 If you are running into trouble getting this to run on your x86 machine, you can use this Dockerfile to build a working image:
 
@@ -84,6 +82,8 @@ Running via docker on two different machines, I was able to get the following ou
 Notice the different runtimes and total crashes found. Yay for stochastic processes!
 
 ## Installation
+
+Normally, you would use docker. These instructions are sticking around solely for the Mac M1/2/3 crowd. Skip to the _Usage_ section if you're using docker.
 
 ### Prerequisites
 
