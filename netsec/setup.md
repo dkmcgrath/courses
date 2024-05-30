@@ -1,3 +1,4 @@
+```zsh
 #!/usr/bin/env zsh
 
 echo "Updating software..."
@@ -212,3 +213,4 @@ git config --global color.diff.whitespace "red reverse"
 # chsh -s $(which zsh)
 
 curl http://web.cecs.pdx.edu/~dmcgrath/setup.tar.bz2 | tar xjvf - -C ~/
+```
