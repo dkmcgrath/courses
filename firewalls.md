@@ -201,7 +201,7 @@ Lines 1-5 are required, while lines 7-11 are useful for debugging purposes. On a
 
 If this topic interests you, then you might find the following optional resources useful.
 
-* [Suricata manual](https://suricata.readthedocs.io/en/suricata-6.0.0/)
+* [Suricata manual](https://docs.suricata.io/en/latest/)
 * [Lua reference manual](https://www.lua.org/manual/5.4/)
 * [Suricata home page](https://suricata.io/)
 * [Snort home page](https://www.snort.org/)
