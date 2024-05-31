@@ -203,7 +203,7 @@ If this topic interests you, then you might find the following optional resource
 
 * [Suricata manual](https://suricata.readthedocs.io/en/suricata-6.0.0/)
 * [Lua reference manual](https://www.lua.org/manual/5.4/)
-* [Suricata home page](https://suricata-ids.org/)
+* [Suricata home page](https://suricata.io/)
 * [Snort home page](https://www.snort.org/)
 
 There exist some operating systems that are designed to be firewalls. These are often referred to as "firewall distros". Some (but certainly not all) of the more popular ones are:
