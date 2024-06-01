@@ -20,8 +20,6 @@
   * Monday: 14:00 - 16:00 (Fishbowl)
   * Tuesday: 14:00 - 16:00 (Fishbowl)
 
-[Bomb file](bomb)
-
 ## FINAL PROJECT:
 
 [Final Project](final.md) -- Please submit topics by Friday of Week 9.
