@@ -79,7 +79,7 @@ This class provides an overview of computer security intended for a broad audien
 | 6 | Network Security: Data-link layer (ARP), Network layer (IP, CIDR, Sniffing, Spoofing, Hijacking)<br>Network Security: Network layer (DDoS, IPSec/VPNs, firewalls and filtering, network segmentation, network intelligence, ICMP) |  |  |
 | 7 | Network Security: Transport layer (TCP, TLS, certificate authorities and transparency, certificate revocation), Application layer: DNS security (DNS, DNSSEC) <br> Network Security: Application layer - DNS security (DoH, DoT, Oblivious DNS), E-mail security (SMTP/IMAP/POP over TLS, DKIM, SPF, DMARC)<br>Host Security: Host attacks (Initial access, Privilege escalation)| [Lab 4](hw4.md) | |
 | 8 | Host attacks (Internal recon, Lateral movement, Persistence, Impact)<br>Host defenses (IDS/IPS/EDR, signature detection, anomaly detection, blocklisting and allowlisting, Software signing, Virtualization and isolation techniques, File system backup and encryption)<br>Application security: DevSecOps| | |
-| 9 | Programming language and CPU security, Memory corruption, Return-oriented Programming, Canaries, ASLR, Control-Flow Integrity | | Lab 4|
+| 9 | Programming language and CPU security, Memory corruption, Return-oriented Programming, Canaries, ASLR, Control-Flow Integrity | [Lab 5](hw5.md) | Lab 4|
 | 10 | Supply-chain security <br> Privacy and anonymity security| | |
 | Finals week | | | |
 | | | | |
