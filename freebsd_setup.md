@@ -14,8 +14,8 @@
 
 # Set your network interfaces names; set these as they appear in ifconfig
 # they will not be renamed during the course of installation
-WAN="hn0"
-LAN="hn1"
+WAN="em0"
+LAN="em1"
 
 # Install dnsmasq
 pkg install -y dnsmasq

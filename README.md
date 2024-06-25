@@ -4,7 +4,7 @@
 * [CS496/596: Network Security](netsec/readme.md)
 * [CS493/593: Digital Forensics](forensics/readme.md)
 * [CS491/591: Introduction to Computer Security](introsec/readme.md)
-* [CS410:510: System Administration and DevOps](secdevops/readme.md)
+* [CS410/510: System Administration and DevOps](secdevops/readme.md)
 
 ## Pages
 
